@@ -43,6 +43,6 @@ python_files = ["test_*.py"]
 addopts = "-v --tb=short"
 
 [tool.pyright]
-extraPaths = [".", "student", "controllers", "simulation"]
-include = [".", "student", "controllers", "simulation", "tests", "notebooks"]
+extraPaths = [".", "controllers", "simulation"]
+include = [".", "controllers", "simulation", "tests", "notebooks"]
 

@@ -275,9 +275,6 @@ autonomous-vehicle-safe-control/
 ├── tests/                                # Automated verification suite
 │   ├── __init__.py
 │   └── test_verification.py              # Pytest unit & integration test suite
-├── student/                              # Autograder compatibility shim
-│   ├── acc_controller.py
-│   └── cmpc_controller.py
 ├── acc_controller.py                     # Root-level entry point for autograders
 ├── cmpc_controller.py                    # Root-level entry point for autograders
 ├── acc_utils.py                          # Root-level compatibility shim for ACC utilities
