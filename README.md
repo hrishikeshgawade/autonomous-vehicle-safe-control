@@ -137,18 +137,31 @@ Actuator constraints:
 ## Project Structure
 
 ```
-hw1/
+autonomous-vehicle-safe-control/
 ├── assets/                               # Visual plots & schematic diagrams
 │   ├── CBF_car2.png                      # ACC vehicle geometry schematic
 │   ├── acc_simulation_results.png        # Generated 4-panel ACC performance figure
 │   └── trajectory_tracking_results.png   # Generated 4-panel CMPC/LQR tracking figure
-├── student/
-│   ├── acc_controller.py                 # Core QP controller matrices (P, q, A, b) & tuning
+├── controllers/                          # Core optimization-based controllers
+│   ├── __init__.py                       # Package exports
+│   ├── acc_controller.py                 # CLF-CBF-QP Adaptive Cruise Controller
+│   └── cmpc_controller.py                # Analytical Jacobian, TV-LQR & Constrained MPC
+├── simulation/                           # Vehicle kinematics & numerical integration
+│   ├── __init__.py                       # Package exports
 │   ├── acc_utils.py                      # ACC numerical ODE integration & barrier evaluation
-│   ├── cmpc_controller.py                # Analytical Jacobian, LQR, and CMPC solvers
-│   ├── cmpc_utils.py                     # Bicycle model dynamics simulator & reference generator
+│   └── cmpc_utils.py                     # Bicycle dynamics simulator & trajectory generator
+├── notebooks/                            # Interactive demonstration notebooks
 │   ├── AdaptiveCruiseControl.ipynb       # Interactive notebook for ACC validation
 │   └── TrajectoryTracking.ipynb          # Interactive notebook for LQR & CMPC evaluation
+├── tests/                                # Automated verification suite
+│   ├── __init__.py
+│   └── test_verification.py              # End-to-end integration & unit tests
+├── student/                              # Course autograder compatibility shim
+│   ├── __init__.py
+│   ├── acc_controller.py
+│   └── cmpc_controller.py
+├── acc_controller.py                     # Root-level entry point for autograders
+├── cmpc_controller.py                    # Root-level entry point for autograders
 ├── .gitignore                            # Clean repo hygiene excluding caches & virtualenvs
 └── README.md                             # Comprehensive project documentation
 ```
