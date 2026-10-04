@@ -70,9 +70,9 @@ def LQR_Controller(x_bar, u_bar, x0, param):
     #############################################################################
 
     # define the parameters
-    Q = np.diag([20.0, 20.0, 10.0, 5.0])
-    R = np.diag([0.1, 1.0])
-    Pt = np.diag([30.0, 30.0, 15.0, 10.0])
+    Q = np.diag([10.0, 10.0, 5.0, 2.0])
+    R = np.diag([0.5, 10.0])
+    Pt = np.diag([20.0, 20.0, 10.0, 5.0])
 
     # define the cost function
     P = np.zeros((n_var, n_var))

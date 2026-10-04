@@ -18,9 +18,9 @@ def ACC_Controller(t, x, param):
     #############################################################################
 
     # set the parameters
-    lam = 0.5
+    lam = 3.0
     alpha = 1.0
-    w = 1e6
+    w = 1e8
 
     # construct the cost function
     P = np.array([[2.0, 0.0], [0.0, 2.0 * w]])
