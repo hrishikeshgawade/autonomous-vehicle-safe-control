@@ -280,6 +280,8 @@ autonomous-vehicle-safe-control/
 │   └── cmpc_controller.py
 ├── acc_controller.py                     # Root-level entry point for autograders
 ├── cmpc_controller.py                    # Root-level entry point for autograders
+├── acc_utils.py                          # Root-level compatibility shim for ACC utilities
+├── cmpc_utils.py                         # Root-level compatibility shim for CMPC utilities
 ├── pyproject.toml                        # Standard Python package metadata & test config
 ├── requirements.txt                      # Pinned production and test dependencies
 ├── LICENSE                               # MIT License
